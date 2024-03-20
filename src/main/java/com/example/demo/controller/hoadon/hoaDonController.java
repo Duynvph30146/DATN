@@ -11,4 +11,5 @@ public class hoaDonController {
     public String admin() {
         return "admin/qlhoadon";
     }
+    //đã sửa đường dẫn
 }
