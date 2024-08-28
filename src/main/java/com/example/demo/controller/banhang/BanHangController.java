@@ -970,6 +970,7 @@ public class BanHangController {
                 redirectAttributes.addFlashAttribute("checkHangCho", true);
             }
             hoaDonCheckBill = hdset;
+            phieugiamsaoluu = new PhieuGiamGia();
             return "redirect:/hoa-don/ban-hang";
         }
         // thanh toán đơn có giao hàng
@@ -1150,10 +1151,12 @@ public class BanHangController {
             }
             redirectAttributes.addFlashAttribute("orderSuccess", false);
             hoaDonCheckBill = hdset1;
+            phieugiamsaoluu = new PhieuGiamGia();
             return "redirect:/hoa-don/ban-hang";
 
         }
         redirectAttributes.addFlashAttribute("orderSuccess", false);
+        phieugiamsaoluu = new PhieuGiamGia();
         return "redirect:/hoa-don/ban-hang";
     }
 

@@ -107,7 +107,7 @@ public class HoaDonImp implements HoaDonService {
             ConverterProperties converterProperties = new ConverterProperties();
             converterProperties.setFontProvider(defaultFontProvider);
             HtmlConverter.convertToPdf(fileHtmlName, pdfWriter, converterProperties);
-            FileOutputStream fout = new FileOutputStream("C:/Users/ADMIN/Desktop/" + pdfname + ".pdf");
+            FileOutputStream fout = new FileOutputStream("C:/Users/ADMIN/OneDrive/Desktop/" + pdfname + ".pdf");
             byteArrayOutputStream.writeTo(fout);
             byteArrayOutputStream.close();
             byteArrayOutputStream.flush();
@@ -153,7 +153,7 @@ public class HoaDonImp implements HoaDonService {
             ConverterProperties converterProperties = new ConverterProperties();
             converterProperties.setFontProvider(defaultFontProvider);
             HtmlConverter.convertToPdf(fileHtmlName, pdfWriter, converterProperties);
-            FileOutputStream fout = new FileOutputStream("C:/Users/ADMIN/Desktop/" + pdfname + "off.pdf");
+            FileOutputStream fout = new FileOutputStream("C:/Users/ADMIN/OneDrive/Desktop/" + pdfname + "off.pdf");
             byteArrayOutputStream.writeTo(fout);
             byteArrayOutputStream.close();
             byteArrayOutputStream.flush();
@@ -168,7 +168,7 @@ public class HoaDonImp implements HoaDonService {
 
     @Override
     public Boolean delete(HoaDon idhd) {
-        if(dao.existsById(idhd.getId())){
+        if (dao.existsById(idhd.getId())) {
             dao.delete(idhd);
             return true;
         }
